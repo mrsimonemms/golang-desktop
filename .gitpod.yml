@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - command: |
+      pre-commit install --install-hooks
+
+      exit 0
+  - init: |
+      if [ -f "go.mod" ]; then
+        go install ./...
+      fi
+
+vscode:
+  extensions:
+    - donjayamanne.git-extension-pack
+    - EditorConfig.EditorConfig
+    - golang.go

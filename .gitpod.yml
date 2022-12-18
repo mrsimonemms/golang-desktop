@@ -10,9 +10,24 @@ tasks:
       if [ -f "go.mod" ]; then
         go install ./...
       fi
+    command: |
+      wails dev
 
 vscode:
   extensions:
     - donjayamanne.git-extension-pack
     - EditorConfig.EditorConfig
     - golang.go
+
+ports:
+  - name: Vite server
+    port: 5173
+    onOpen: ignore
+
+  - name: Wails preview
+    port: 34115
+    onOpen: notify
+
+  - name: VNC
+    port: 6080
+    onOpen: notify

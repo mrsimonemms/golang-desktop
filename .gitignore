@@ -1,9 +1,5 @@
-dist
-tmp
-
+build/bin
 node_modules
-
-.idea
-.DS_Store
-Thumbs.db
-.commit
+frontend/dist
+frontend/wailsjs
+package.json.md5

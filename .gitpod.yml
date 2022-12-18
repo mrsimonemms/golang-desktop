@@ -18,6 +18,8 @@ vscode:
     - donjayamanne.git-extension-pack
     - EditorConfig.EditorConfig
     - golang.go
+    - svelte.svelte-vscode
+    - ms-vscode.vscode-typescript-next
 
 ports:
   - name: Vite server
